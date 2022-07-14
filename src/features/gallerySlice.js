@@ -8,8 +8,7 @@ export const fetchGalleryImages = createAsyncThunk(
       url: `https://api.pexels.com/v1/search?page=${page}&query=${searchValue}&per_page=${photosPerPage}`,
       method: "GET",
       headers: {
-        Authorization:
-          process.env.REACT_APP_PEXEL_API_KEY,
+        Authorization: process.env.REACT_APP_PEXEL_API_KEY,
       },
     });
     const data = res.data;
