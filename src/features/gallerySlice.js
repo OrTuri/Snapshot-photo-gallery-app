@@ -9,10 +9,9 @@ export const fetchGalleryImages = createAsyncThunk(
       method: "GET",
       headers: {
         Authorization:
-          "563492ad6f917000010000014520be1892104a76bd8e07a8ce295c02",
+          process.env.REACT_APP_PEXEL_API_KEY,
       },
     });
-    console.log(searchValue, page);
     const data = res.data;
     return data;
   }
